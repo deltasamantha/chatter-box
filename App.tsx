@@ -8,27 +8,17 @@
  * @format
  */
 
+import {Box, NativeBaseProvider, Text} from "native-base";
 import React from "react";
-import {Text, View} from "react-native";
+import { chatterboxTheme } from "./theme/theme";
 
 const App = () => {
-  // const isDarkMode = useColorScheme() === 'dark';
-
-  // const backgroundStyle = {
-  //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  //   flex: 1,
-  // };
-
   return (
-    // <SafeAreaView style={backgroundStyle}>
-    //   <StatusBar
-    //     barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-    //     backgroundColor={backgroundStyle.backgroundColor}
-    //   />
-    // </SafeAreaView>
-    <View>
-      <Text>Helo world</Text>
-    </View>
+    <NativeBaseProvider theme={chatterboxTheme}>
+      <Box flex="1" bg="chatterbox.500" alignItems="center" justifyContent="center">
+        <Text>Helo world</Text>
+      </Box>
+    </NativeBaseProvider>
   );
 };
 
