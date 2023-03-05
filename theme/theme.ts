@@ -30,7 +30,7 @@ export const chatterboxTheme = extendTheme({
       100: "#ffd1a1",
       200: "#ffb971",
       300: "#ffa242",
-      400: "#ff8b13",
+      400: "#E9A178",
       500: "#e67d11",
       600: "#b3610d",
       700: "#80460a",
@@ -56,6 +56,23 @@ export const chatterboxTheme = extendTheme({
     initialColorMode: "dark",
     useSystemColorMode: false,
   },
+  components: {
+     Input: {
+      variants: {
+        underlined: {
+          _dark: {
+            color: "chatterbox.800",
+            textColor: "chatterbox.800",
+            borderColor: "chatterbox.800",
+            placeholderTextColor: "chatterbox.500",
+            _focus: {
+              borderColor: "white",
+            },
+          },
+        },
+      },
+    },
+  }
 });
 
 
