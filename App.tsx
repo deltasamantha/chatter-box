@@ -8,16 +8,15 @@
  * @format
  */
 
-import {Box, NativeBaseProvider, Text} from "native-base";
+import {NativeBaseProvider} from "native-base";
 import React from "react";
-import { chatterboxTheme } from "./theme/theme";
+import Navigator from "./navigators/Navigator";
+import {chatterboxTheme} from "./theme/theme";
 
 const App = () => {
   return (
     <NativeBaseProvider theme={chatterboxTheme}>
-      <Box flex="1" bg="chatterbox.500" alignItems="center" justifyContent="center">
-        <Text>Helo world</Text>
-      </Box>
+      <Navigator />
     </NativeBaseProvider>
   );
 };
